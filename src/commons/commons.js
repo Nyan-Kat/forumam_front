@@ -112,7 +112,7 @@
         $rootScope.loadMapPlan = function () {
             var mapBlock = angular.element(document.querySelector('#map_plan'));
             if (mapBlock.length && typeof google === 'object' && typeof google.maps === 'object') {
-                var myLatlng = new google.maps.LatLng(48.844559, 2.434568);
+                var myLatlng = new google.maps.LatLng(48.9441442, 2.43001740);
                 var styleArray =
                     [
                         {
@@ -229,7 +229,7 @@
 
                 //add a custom marker to the map
                 marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(48.836291, 2.434390),
+                    position: new google.maps.LatLng(48.9441442, 2.43001740),
                     map: map,
                     visible: true,
                     icon: 'assets/img/default_marker.png',
