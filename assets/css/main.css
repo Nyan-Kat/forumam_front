@@ -2131,9 +2131,7 @@ h3.lien_connexion a {
 }
 
 /* espace carre center */
-/*.space_carre_center .title_area{
-    padding-top: 45px;
-}*/
+
 .space_carre_center .title_box_img {
     margin-bottom: 0;
 }
@@ -2145,6 +2143,12 @@ h3.lien_connexion a {
 
 .carre_center > img {
     width: 100%;
+}
+
+.carre_center{
+  text-align:center; 
+  display:table-cell; 
+  vertical-align:middle;
 }
 
 /*.space_carre_center .block_content{
