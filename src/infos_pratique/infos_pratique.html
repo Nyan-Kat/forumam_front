@@ -4,7 +4,7 @@
            ng-click="stickNavLinks($event)">Plan</a>
     </li>
     <li>
-        <a data-href="#info_pratic_area" id="target_info_pratic_area" ng-click="stickNavLinks($event)">Pratique</a>
+        <a data-href="#info_pratic_area" id="target_info_pratic_area" ng-click="stickNavLinks($event)">Infos Pratiques</a>
     </li>
 </ul>
 <div class="global_wrapper info_pratic_page">
@@ -18,20 +18,20 @@
                 </h3>
                 <div class="block_content mb_15">
                     <p>
-                        Retrouvez le plan des entreprises exposantes par ordre alphabétique ou par catégorie.
+                        A venir très prochainement
                     </p>
                 </div>
             </div>
         </div>
-        <div class="right_parte plan_switcher_area">
+        <!--<div class="right_parte plan_switcher_area">
             <button class="btn purple_btn small_btn animated_btn active" data-target="#alpha_vision"
                     ng-click="exposantsByAlpha($event)"><span>vue Alphabétique</span></button>
             <button class="btn purple_btn small_btn animated_btn" data-target="#cat_vision"
                     ng-click="exposantsByCategory($event)"><span>vue Par catégorie</span></button>
-        </div>
+        </div>-->
     </section>
 
-    <div class="plan_switcher_content">
+    <!--<div class="plan_switcher_content">
         <div class="list_exposants">
             <ul ng-repeat="exposantView in exposantsViews">
                 <li ng-repeat="exposant in exposantView">
@@ -42,34 +42,41 @@
                     </a>
                 </li>
             </ul>
-        </div>
-        <div id="alpha_vision">
+        </div>-->
+        <!--<div id="alpha_vision">
             <img src="assets/img/plan.jpg" alt="">
-            <!--<p class="align_center">-->
-            <!--<a href="#" class="btn orange_btn animated_btn"><span>Télécharger en pdf</span></a>-->
-            <!--</p>-->
-        </div>
+            <p class="align_center">
+              <a href="#" class="btn orange_btn animated_btn"><span>Télécharger en pdf</span></a>
+            </p>
+        </div>-->
     </div>
     <section id="info_pratic_area" class="sections_area clearfix">
         <div class="left_parte">
             <div class="title_area">
                 <h3 class="block_title with_bg orange_clr withRelated_icn info_pratic_title">
-                            <span class="small_title_parte">
-                               Informations 
-                            </span>
-                    <span>
-                                pratiques
-                            </span>
+                  <span class="small_title_parte">
+                     Informations 
+                  </span>
+                  <span>
+                      pratiques
+                  </span>
                 </h3>
                 <div class="app_txt">
-                    <h5 class="darkPurple_clr">Tu souhaites assister à la finale du Challenge Arts&Métiers ?</h5>
+                    <h5 class="darkPurple_clr">Tu souhaites participer au Challenge Arts & Métiers ?</h5>
                     <div class="mb_40 ml" style="width: 90%">
-                        Rendez-vous à 15h à l'espace conférence. <br>
-                        Avec 143 candidat(e)s inscrit(e)s regroupé(e)s en 61
-                        équipes, la sélection sera rude jusqu'à la compétition entre les deux équipes finalistes le jour
-                        J du forum. Industrie, marketing, logistique, innovation, digital, communication, voici quelques
-                        unes des thématiques abordées lors de ce concours étudiant ouvert à toutes les écoles et
-                        universités.
+                      L'an dernier, nous avions 143 candidat(e)s inscrit(e)s regroupé(e)s en 61 équipes. 
+                      La sélection avait été rude jusqu'à la compétition entre les deux équipes finalistes le jour
+                      J du forum. Industrie, marketing, logistique, innovation, digital, communication, voici quelques
+                      unes des thématiques abordées lors de ce concours étudiant ouvert à toutes les écoles et
+                      universités.
+                      <br>
+                      Cette année, l'initiative est reconduite, alors n'hésitez pas à vous inscrire au lien suivant
+                      <br>
+                      <a href="https://www.agorize.com/fr/challenges/challengeartsetmetiers" class="btn purple_btn inverted_btn animated_btn">
+                         <span>
+                            Lien vers le challenge
+                         </span>
+                      </a>
                     </div>
                     <div class="align_center">
                         <img src="assets/img/logo_challenge.png" alt="logo challenge" style="height: 200px;">
@@ -85,8 +92,9 @@
                         Lieu
                     </label>
                     <span>
-                       Parc des Expositions Le Bourget <br>                                          
-                       Carrefour Charles Lindbergh, 93350 Le Bourget
+                      Parc des Expositions Le Bourget 
+                      <br>                                          
+                      Carrefour Charles Lindbergh, 93350 Le Bourget
                     </span>
                 </p>
                 <p class="group_info">
@@ -94,31 +102,32 @@
                         Date
                     </label>
                     <span>
-                                le 6 décembre de 9h00 à 18h00
-                            </span>
+                        le 6 décembre de 9h00 à 18h00
+                    </span>
                 </p>
                 <p class="group_info">
                     <label for="" class="darkPurple_clr">
                         Accès
                     </label>
                     <span>
-                                RER B : Le Bourget <br>
-                                Bus : 133
-                            </span>
+                      RER B : Le Bourget 
+                      <br>
+                      Bus : 133
+                    </span>
                 </p>
                 <p class="group_info">
                     <label for="" class="darkPurple_clr">
                         Coût
                     </label>
                     <span>
-                                Gratuit
-                            </span>
+                        Gratuit
+                    </span>
                 </p>
-                <p class="align_center">
+                <!--<p class="align_center">
                     <a target="_blank" class="btn purple_btn animated_btn"><span>Télécharger le plan d'accès</span></a>
-                </p>
+                </p>-->
             </div>
-            <div class="application_content mobile_application_block clearfix">
+            <!--<div class="application_content mobile_application_block clearfix">
                 <div class="tel_visu">
                     <img src="assets/img/tel_img.jpg" alt="">
                 </div>
@@ -135,9 +144,9 @@
                     </a>
                     <a href="" class="orange_clr">
                         Version Android
-                    </a>-->
+                    </a>
                 </p>
-            </div>
+            </div>-->
         </div>
     </section>
 </div>

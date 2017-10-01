@@ -1,305 +1,340 @@
 <ul class="stick_nav">
-    <li>
-        <a data-href="#presentation_area" id="target_presentation_area" class="active" ng-click="stickNavLinks($event)">Présentation</a>
-    </li>
-    <li>
-        <a data-href="#news_area" id="target_news_area" ng-click="stickNavLinks($event)">Actualités</a>
-    </li>
-    <li>
-        <a data-href="#spaces_area" id="target_spaces_area" ng-click="stickNavLinks($event)">Publics</a>
-    </li>
-    <li>
-        <a data-href="#info_pratic_area" id="target_info_pratic_area" ng-click="stickNavLinks($event)">Pratique</a>
-    </li>
-    <li>
-        <a data-href="#contact_area" id="target_contact_area" ng-click="stickNavLinks($event)">Informations</a>
-    </li>
+   <li>
+      <a data-href="#presentation_area" id="target_presentation_area" class="active" ng-click="stickNavLinks($event)">Présentation</a>
+   </li>
+   <li>
+      <a data-href="#news_area" id="target_news_area" ng-click="stickNavLinks($event)">Actualités</a>
+   </li>
+   <li>
+      <a data-href="#spaces_area" id="target_spaces_area" ng-click="stickNavLinks($event)">Publics</a>
+   </li>
+   <li>
+      <a data-href="#info_pratic_area" id="target_info_pratic_area" ng-click="stickNavLinks($event)">Pratique</a>
+   </li>
+   <li>
+      <a data-href="#contact_area" id="target_contact_area" ng-click="stickNavLinks($event)">Informations</a>
+   </li>
 </ul>
 
 <div class="global_wrapper home_page">
-    <section id="presentation_area" class="presentation_area home_presentation">
-        <div class="presentation_txt_area">
-            <img src="assets/img/date-logo.png" alt="Titre">
-        </div>
-        <p class="trailer_area align_center">
-            <a class="btn big_btn purple_btn animated_btn inverted_btn shadow_btn" href="assets/Plaquette2018.pdf">
-                <span>Télécharger la plaquette</span>
-            </a>
-        </p>
-        <a data-href="#news_area" class="scroll_btm" ng-click="scroll_btm($event)">&nbsp;</a>
-    </section>
-    <section id="news_area" class="sections_area news_area clearfix">
-        <div class="left_parte">
-            <div class="title_area">
-                <h3 class="block_title with_bg orange_clr withRelated_icn news_big_title">
-                    <span>Actualités {{scrollPos}}</span>
-                </h3>
-                <div class="block_content">
-                    <p>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="right_parte grey_bg" style="z-index: 100">
-            <article actualite-data="currentActualite"></article>
-            <ul class="news_list">
-                <li class="{{types_actualites[actualite.type].class}}"
-                    ng-repeat="(key, actualite) in actualites track by $index" ng-click="showArticle(actualite.id)">
-                    <a href="">
-                        <span class="news_visu">
-                            <img ng-if="actualite.type == 'video'"  ng-src="http://img.youtube.com/vi/{{actualite.youtube_id}}/hqdefault.jpg" alt="">
-                            <img ng-if="actualite.type == 'article'"  ng-src="{{actualite.img_url ? actualite.img_url : 'assets/img/news_img01.jpg'}}" alt="">
-
-                        </span><!--
-                        --><span class="news_resume">
-                            <h4 class="news_title darkPurple_clr">
-                                <img ng-src="{{ types_actualites[actualite.type].icon ? types_actualites[actualite.type].icon : 'assets/img/article_icn.png'}}"
-                                     alt="">
-                                <span>
-                                    {{actualite.title}}
-                                </span>
-                            </h4>
-                            <p>
-                                {{actualite.description | limitTo: 100}}{{actualite.description.length > 100 ? ' [...]' : ''}}
-                            </p>
-                        </span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section id="spaces_area" class="sections_area spaces_area clearfix">
-        <div class="left_parte space_student grey_bg">
-            <div class="title_area">
-                <h3 class="block_title with_bg darkPurple_clr">
-                    <img src="assets/img/space_student_img.png" alt="" class="title_box_img">
-                    <span class="small_title_parte">
-                               Espace 
-                            </span>
-                    <span>
-                                Étudiants
-                            </span>
-                </h3>
-                <div class="block_content">
-                    <p class="mb_40"><!--
-                        Lorem ipsum dolor amet, consectetur adipisicing elit, sed do eiusmod. Suspendisse volutpat
-                        euismod orci.
-                    --></p>
-                    <p>
-                        <a href="#/exposants" class="btn purple_btn animated_btn"><span>exposants</span></a>
-                        <a href="#/biensepreparer" class="btn purple_btn animated_btn"><span>Bien se préparer</span></a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="right_parte space_entreprise">
-            <div class="title_area">
-                <h3 class="block_title with_bg orange_clr">
-                    <img src="assets/img/space_entreprise_img.png" alt="" class="title_box_img">
-                    <span class="small_title_parte">
-                               Espace
-                            </span>
-                    <span>
-                                Entreprises
-                            </span>
-                </h3>
-                <div class="block_content">
-                    <p class="mb_40"><!--
-                        Lorem ipsum dolor amet, consectetur adipisicing elit, sed do eiusmod. Suspendisse volutpat
-                        euismod orci.
-                    --></p>
-                    <p>
-                        <a href="https://docs.google.com/forms/u/1/d/e/1FAIpQLSfF2ATFb-Lwez1h-KeTnx37phZmXhysIBZl0kOgJ5YFaumscg/viewform"
-                           class="btn orange_btn animated_btn"><span>Inscription</span></a>
-                        <a href="#/connexion" class="btn orange_btn animated_btn"><span>Connexion</span></a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="info_pratic_area" class="sections_area clearfix">
-        <div class="left_parte">
-            <div class="title_area">
-                <h3 class="block_title with_bg orange_clr withRelated_icn info_pratic_title">
-                    <span class="small_title_parte">Informations</span>
-                    <span>pratiques</span>
-                </h3>
-                <div class="app_txt">
-                    <h5 class="darkPurple_clr">Tu souhaites assister à la finale du Challenge Arts & Métiers ?</h5>
-                    <div class="mb_40 ml" style="width: 90%">
-                        Rendez-vous à 15h à l'espace conférence. <br>
-                        Avec 143 candidat(e)s inscrit(e)s regroupé(e)s en 61
-                        équipes, la sélection sera rude jusqu'à la compétition entre les deux équipes finalistes le jour
-                        J du forum. Industrie, marketing, logistique, innovation, digital, communication, voici quelques
-                        unes des thématiques abordées lors de ce concours étudiant ouvert à toutes les écoles et
-                        universités.
-                    </div>
-                    <div class="align_center">
-                        <img src="assets/img/logo_challenge.png" alt="logo challenge" style="height: 200px;">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="right_parte grey_bg">
-            <div id="map_plan" class="mb_40"></div>
-            <div class="map_output">
-                <p class="group_info">
-                    <label for="" class="darkPurple_clr">
-                        Lieu
-                    </label>
-                    <span>
-                       Parc des Expositions Le Bourget <br>                                             
-                       Carrefour Charles Lindbergh, 93350 Le Bourget
-                    </span>
-                </p>
-                <p class="group_info">
-                    <label for="" class="darkPurple_clr">
-                        Date
-                    </label>
-                    <span>
-                                le 6 décembre de 9h00 à 18h00
-                            </span>
-                </p>
-                <p class="group_info">
-                    <label for="" class="darkPurple_clr">
-                        Accès
-                    </label>
-                    <span>
-                                RER B : Le Bourget <br>
-                                Bus : 133
-                            </span>
-                </p>
-                <p class="group_info">
-                    <label for="" class="darkPurple_clr">
-                        Coût
-                    </label>
-                    <span>
-                                Gratuit
-                            </span>
-                </p>
-                <p class="align_center">
-                    <a href="" class="btn purple_btn animated_btn"><span>Télécharger le plan du forum</span></a>
-                </p>
-            </div>
-
-            <div class="application_content mobile_application_block clearfix">
-                <div class="tel_visu">
-                    <img src="assets/img/tel_img.jpg" alt="">
-                </div>
-                <div class="app_txt">
-                    <h5 class="darkPurple_clr">Le programme</h5>
-                    <p class="mb_40">
-                        {{ textes['programme'] }}
-                    </p>
-                </div>
-                <p class="app_links align_center">
-                    <!--<a href="" class="orange_clr">
-                        Version iOS
-                    </a>
-                    <a href="" class="orange_clr">
-                        Version Android
-                    </a>-->
-                </p>
-            </div>
-        </div>
-    </section>
-    <section id="contact_area" class="sections_area clearfix">
-        <div class="left_parte">
-            <div class="title_area">
-                <h3 class="block_title with_bg orange_clr withRelated_icn partners_title">
-                            <span>
-                               Partenaires
-                            </span>
-                </h3>
-            </div>
-            <div class="mb_60">
-                <ul class="partners_list">
-                    <li>
-                        <img src="assets/img/partenaire1.png" alt="">
-                    </li>
-                    <li>
-                        <img src="assets/img/partenaire2.png" alt="">
-                    </li>
-                    <li>
-                        <img src="assets/img/partenaire3.png" alt="">
-                    </li>
-                    <li>
-                        <img src="assets/img/partenaire5.png" alt="">
-                    </li>
-                    <li>
-                        <img src="assets/img/partenaire4.png" alt="">
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-        <div class="right_parte grey_bg contact_area">
-            <div class="title_area">
-                <h3 class="block_title with_bg darkPurple_clr withRelated_icn contact_title">
-                    <span>Contact</span>
-                </h3>
-                <div class="block_content">
-                    <p class="mb_60">
-                        Vous avez une question ou vous cherchez un renseignement ? Contactez-nous.
-                    </p>
-                </div>
-            </div>
+   <section id="presentation_area" class="presentation_area home_presentation">
+      <div class="presentation_txt_area">
+         <img src="assets/img/date-logo.png" alt="Titre">
+      </div>
+      <p class="trailer_area align_center">
+         <a class="btn big_btn purple_btn animated_btn inverted_btn shadow_btn" href="assets/Plaquette2018.pdf">
+            <span>
+               Télécharger la plaquette
+            </span>
+         </a>
+      </p>
+      <a data-href="#news_area" class="scroll_btm" ng-click="scroll_btm($event)">&nbsp;</a>
+   </section>
+   <section id="news_area" class="sections_area news_area clearfix">
+      <div class="left_parte">
+         <div class="title_area">
+            <h3 class="block_title with_bg orange_clr withRelated_icn news_big_title">
+               <span>
+                  Actualités {{scrollPos}}
+               </span>
+            </h3>
             <div class="block_content">
-                <div ng-show="formErrors" class="alert">
-                    <div class="errors">
-                        <p ng-repeat="(key, value)  in formErrors track by $index">{{ value[0] }}</p>
-                    </div>
-                </div>
-                <div data-ng-show="errors" class="alert">{{errors}}</div>
-                <div data-ng-show="success" class="info_success">
-                    {{success}}
-                </div>
-                <form class="contact_form" name="contactForm" novalidate>
-                    <div class="control_group">
-                        <input type="text" name="name" ng-model="contact.name"
-                               class="simple_field darkPurple_clr full_size"
-                               placeholder="Nom*" ng-required="true">
-                        <div ng-if="contactForm.name.$dirty || submitted" ng-messages="contactForm.name.$error"
-                             class="alert">
-                            <div ng-message="required">Le champ nom est obligatoire.</div>
-                        </div>
-                    </div>
-                    <div class="control_group">
-                        <input type="email" name="email" ng-model="contact.email"
-                               class="simple_field darkPurple_clr full_size"
-                               placeholder="Email*" ng-required="true">
-                        <div ng-if="contactForm.email.$dirty || submitted" ng-messages="contactForm.email.$error"
-                             class="alert">
-                            <div ng-message="required">Le champ email est obligatoire.</div>
-                            <div ng-message="email">Le champ email doit être une adresse email valide.</div>
-                        </div>
-                    </div>
-                    <div class="control_group last_group">
-                        <label for="" class="darkPurple_clr full_size">Message*</label>
-                        <textarea name="message" ng-model="contact.message"
-                                  class="simple_field darkPurple_clr full_size"
-                                  ng-maxlength="1000" ng-required="true">
-                        </textarea>
-
-                        <div ng-if="contactForm.message.$dirty || submitted" ng-messages="contactForm.message.$error"
-                             class="alert">
-                            <div ng-message="required">Le champ message est obligatoire.</div>
-                            <div ng-message="maxlength">Le texte de message ne peut contenir plus de 1000 caractères.
-                            </div>
-                        </div>
-                    </div>
-                    <div vc-recaptcha key="'6LfxEioTAAAAAP9N1VWdWfZNntZsN0hN3GeTYzwK'"></div>
-                    <div ng-if="submitted && contactForm.$error.recaptcha" class="alert">
-                        <div>Merci de valider la question anti-robot.</div>
-                    </div>
-                    <div class="align_right">
-                        <button type="submit" ng-click="sendEmail(contact)"
-                                class="btn purple_btn inverted_btn small_btn animated_btn">
-                            <span>Envoyer</span>
-                        </button>
-                    </div>
-                </form>
+               <p>
+               </p>
             </div>
-        </div>
-    </section>
+         </div>
+      </div>
+      <div class="right_parte grey_bg" style="z-index: 100">
+         <article actualite-data="currentActualite"></article>
+         <ul class="news_list">
+            <li class="{{types_actualites[actualite.type].class}}" ng-repeat="(key, actualite) in actualites track by $index" ng-click="showArticle(actualite.id)">
+               <a href="">
+                  <span class="news_visu">
+                     <img ng-if="actualite.type == 'video'"  ng-src="http://img.youtube.com/vi/{{actualite.youtube_id}}/hqdefault.jpg" alt="">
+                     <img ng-if="actualite.type == 'article'"  ng-src="{{actualite.img_url ? actualite.img_url : 'assets/img/news_img01.jpg'}}" alt="">
+
+                  </span>
+                  <span class="news_resume">
+                     <h4 class="news_title darkPurple_clr">
+                        <img ng-src="{{ types_actualites[actualite.type].icon ? types_actualites[actualite.type].icon : 'assets/img/article_icn.png'}}" alt="">
+                        <span>
+                           {{actualite.title}}
+                        </span>
+                     </h4>
+                     <p>
+                        {{actualite.description | limitTo: 100}}{{actualite.description.length > 100 ? ' [...]' : ''}}
+                     </p>
+                  </span>
+               </a>
+            </li>
+         </ul>
+      </div>
+   </section>
+   <section id="spaces_area" class="sections_area spaces_area clearfix">
+      <div class="left_parte space_student grey_bg">
+         <div class="title_area">
+            <h3 class="block_title with_bg darkPurple_clr">
+               <img src="assets/img/space_student_img.png" alt="" class="title_box_img">
+               <span class="small_title_parte">
+                  Espace 
+               </span>
+               <span>
+                  Étudiants
+               </span>
+            </h3>
+            <div class="block_content">
+               <p>   
+                  <a href="#/exposants" class="btn purple_btn animated_btn">
+                     <span>
+                      Exposants
+                     </span>
+                  </a>
+                  <a href="#/biensepreparer" class="btn purple_btn animated_btn">
+                     <span>
+                        Bien se préparer
+                     </span>
+                  </a>
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="right_parte space_entreprise">
+         <div class="title_area">
+            <h3 class="block_title with_bg orange_clr">
+               <img src="assets/img/space_entreprise_img.png" alt="" class="title_box_img">
+               <span class="small_title_parte">
+                  Espace
+               </span>
+               <span>
+                  Entreprises
+               </span>
+            </h3>
+            <div class="block_content">
+               <p>
+                  <a href="https://docs.google.com/forms/u/1/d/e/1FAIpQLSfF2ATFb-Lwez1h-KeTnx37phZmXhysIBZl0kOgJ5YFaumscg/viewform" class="btn orange_btn animated_btn">
+                     <span>
+                        Inscription
+                     </span>
+                  </a>
+                  <a href="#/connexion" class="btn orange_btn animated_btn">
+                     <span>
+                        Connexion
+                     </span>
+                  </a>
+               </p>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section id="info_pratic_area" class="sections_area clearfix">
+      <div class="left_parte">
+         <div class="title_area">
+            <h3 class="block_title with_bg orange_clr withRelated_icn info_pratic_title">
+               <span class="small_title_parte">
+                  Informations
+               </span>
+               <span>
+                  Pratiques
+               </span>
+            </h3>
+            <div class="app_txt">
+               <h5 class="darkPurple_clr">
+                  Tu souhaites participer au Challenge Arts & Métiers ?
+               </h5>
+               <div class="mb_40 ml" style="width: 90%">
+                  L'an dernier, nous avions 143 candidat(e)s inscrit(e)s regroupé(e)s en 61 équipes. 
+                  La sélection avait été rude jusqu'à la compétition entre les deux équipes finalistes le jour
+                  J du forum. Industrie, marketing, logistique, innovation, digital, communication, voici quelques
+                  unes des thématiques abordées lors de ce concours étudiant ouvert à toutes les écoles et
+                  universités.
+                  <br>
+                  Cette année, l'initiative est reconduite, alors n'hésitez pas à vous inscrire au lien suivant
+                  <br>
+                  <a href="https://www.agorize.com/fr/challenges/challengeartsetmetiers" class="btn purple_btn inverted_btn animated_btn">
+                     <span>
+                        Lien vers le challenge
+                     </span>
+                  </a>
+               </div>
+               <br>
+               <div class="align_center">
+                  <img src="assets/img/logo_challenge.png" alt="logo challenge" style="height: 200px;">
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="right_parte grey_bg">
+         <div id="map_plan" class="mb_40"></div>
+         <div class="map_output">
+            <p class="group_info">
+               <label for="" class="darkPurple_clr">
+                  Lieu
+               </label>
+               <span>
+                  Parc des Expositions Le Bourget 
+                  <br>                                             
+                  Carrefour Charles Lindbergh, 93350 Le Bourget
+               </span>
+            </p>
+            <p class="group_info">
+               <label for="" class="darkPurple_clr">
+                  Date
+               </label>
+               <span>
+                  le 6 décembre de 9h00 à 18h00
+               </span>
+            </p>
+            <p class="group_info">
+               <label for="" class="darkPurple_clr">
+                  Accès
+               </label>
+               <span>
+                  RER B : Le Bourget 
+                  <br>
+                  Bus : 133
+               </span>
+            </p>
+            <p class="group_info">
+               <label for="" class="darkPurple_clr">
+                  Coût
+               </label>
+               <span>
+                  Gratuit
+               </span>
+            </p>
+            <!--<p class="align_center">
+               <a href="" class="btn purple_btn animated_btn">
+                  <span>
+                     Télécharger le plan du forum
+                  </span>
+               </a>
+            </p>-->
+         </div>
+         <!--<div class="application_content mobile_application_block clearfix">
+            <div class="tel_visu">
+               <img src="assets/img/tel_img.jpg" alt="">
+            </div>
+            <div class="app_txt">
+               <h5 class="darkPurple_clr">
+                  Le programme
+               </h5>
+               <p class="mb_40">
+                  {{ textes['programme'] }}
+               </p>
+            </div>
+            <p class="app_links align_center">
+               <a href="" class="orange_clr">
+                  Version iOS
+               </a>
+               <a href="" class="orange_clr">
+                  Version Android
+               </a>
+            </p>
+         </div>-->
+      </div>
+   </section>
+   <section id="contact_area" class="sections_area clearfix">
+      <div class="left_parte">
+         <div class="title_area">
+            <h3 class="block_title with_bg orange_clr withRelated_icn partners_title">
+               <span>
+                  Partenaires
+               </span>
+            </h3>
+         </div>
+         <div class="mb_30">
+            <ul class="partners_list">
+               <li>
+                  <img src="assets/img/partenaire1.png" alt="">
+               </li>
+               <li>
+                  <img src="assets/img/partenaire2.png" alt="">
+               </li>
+               <li>
+                  <img src="assets/img/partenaire3.png" alt="">
+               </li>
+               <li>
+                  <img src="assets/img/partenaire5.png" alt="">
+               </li>
+               <li>
+                  <img src="assets/img/partenaire4.png" alt="">
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="right_parte grey_bg contact_area">
+         <div class="title_area">
+            <h3 class="block_title with_bg darkPurple_clr withRelated_icn contact_title">
+               <span>
+                  Contact
+               </span>
+            </h3>
+            <div class="block_content">
+               <p class="mb_60">
+                  Vous avez une question ou vous cherchez un renseignement ? Contactez-nous
+               </p>
+            </div>
+         </div>
+         <div class="block_content">
+            <div ng-show="formErrors" class="alert">
+               <div class="errors">
+                  <p ng-repeat="(key, value)  in formErrors track by $index">{{ value[0] }}</p>
+               </div>
+            </div>
+            <div data-ng-show="errors" class="alert">{{errors}}</div>
+            <div data-ng-show="success" class="info_success">
+               {{success}}
+            </div>
+            <form class="contact_form" name="contactForm" novalidate>
+               <div class= "control_group">
+                  <input type="text" name="name" ng-model="contact.name" class="simple_field darkPurple_clr full_size" placeholder="Nom*" ng-required="true">
+                  <div ng-if="contactForm.name.$dirty || submitted" ng-messages="contactForm.name.$error" class="alert">
+                     <div ng-message="required">
+                        Le champ nom est obligatoire
+                     </div>
+                  </div>
+               </div>
+               <div class="control_group">
+                  <input type="email" name="email" ng-model="contact.email" class="simple_field darkPurple_clr full_size" placeholder="Email*" ng-required="true">
+                  <div ng-if="contactForm.email.$dirty || submitted" ng-messages="contactForm.email.$error" class="alert">
+                     <div ng-message="required">
+                        Le champ email est obligatoire
+                     </div>
+                     <div ng-message="email">
+                        Le champ email doit être une adresse email valide
+                     </div>
+                  </div>
+               </div>
+               <div class="control_group last_group">
+                  <label for="" class="darkPurple_clr full_size">
+                     Message*
+                  </label>
+                  <textarea name="message" ng-model="contact.message" class="simple_field darkPurple_clr full_size" ng-maxlength="1000" ng-required="true">
+                  </textarea>
+                  <div ng-if="contactForm.message.$dirty || submitted" ng-messages="contactForm.message.$error" class="alert">
+                     <div ng-message="required">
+                        Le champ message est obligatoire
+                     </div>
+                     <div ng-message="maxlength">
+                        Le texte de message ne peut contenir plus de 1000 caractères
+                     </div>
+                  </div>
+               </div>
+               <div vc-recaptcha key="'6LfxEioTAAAAAP9N1VWdWfZNntZsN0hN3GeTYzwK'"></div>
+               <div ng-if="submitted && contactForm.$error.recaptcha" class="alert">
+                  <div>
+                     Merci de valider la question anti-robot
+                  </div>
+               </div>
+               <div class="align_right">
+                  <button type="submit" ng-click="sendEmail(contact)" class="btn purple_btn inverted_btn small_btn animated_btn">
+                     <span>
+                        Envoyer
+                     </span>
+                  </button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </section>
 </div>
