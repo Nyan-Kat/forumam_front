@@ -24,7 +24,6 @@ app.directive('scroll', function ($window,$compile, $rootScope, $templateRequest
                 var newsSection = angular.element(document.querySelector("#news_area"));
                 var spacesSection = angular.element(document.querySelector("#spaces_area"));
                 var infoPraticSection = angular.element(document.querySelector("#info_pratic_area"));
-                var contactSection = angular.element(document.querySelector("#contact_area"));
 
                 if (windowElement.scrollTop() >= presentationSection.offset().top - 300) {
                     stickNavLinks.removeClass("active");
@@ -46,11 +45,6 @@ app.directive('scroll', function ($window,$compile, $rootScope, $templateRequest
                     var target_info_pratic_area = angular.element(document.querySelector("#target_info_pratic_area"));
                     target_info_pratic_area.addClass("active");
                 }
-                if (windowElement.scrollTop() >= contactSection.offset().top - 300) {
-                    stickNavLinks.removeClass("active");
-                    var target_contact_area = angular.element(document.querySelector("#target_contact_area"));
-                    target_contact_area.addClass("active");
-                }
             }
             if (info_pratic_page.length) {
                 var forumPlanSection = angular.element(document.querySelector("#forum_plan_area"));
@@ -70,7 +64,7 @@ app.directive('scroll', function ($window,$compile, $rootScope, $templateRequest
             if (biensepreparer_page.length) {
                 var biensepreparerSection = angular.element(document.querySelector("#biensepreparer_area"));
                 var carreSection = angular.element(document.querySelector("#carre_area"));
-                var programmeSection = angular.element(document.querySelector("#programme_area"));
+                var challengeSection = angular.element(document.querySelector("#challenge_area"));
                 if (windowElement.scrollTop() >= biensepreparerSection.offset().top - 300) {
                     stickNavLinks.removeClass("active");
                     var target_biensepreparer_area = angular.element(document.querySelector("#target_biensepreparer_area"));
@@ -81,10 +75,10 @@ app.directive('scroll', function ($window,$compile, $rootScope, $templateRequest
                     var target_carre_area = angular.element(document.querySelector("#target_carre_area"));
                     target_carre_area.addClass("active");
                 }
-                if (windowElement.scrollTop() >= programmeSection.offset().top - 300) {
+                if (windowElement.scrollTop() >= challengeSection.offset().top - 300) {
                     stickNavLinks.removeClass("active");
-                    var target_biensepreparer_presentation_area = angular.element(document.querySelector("#target_programme_area"));
-                    target_biensepreparer_presentation_area.addClass("active");
+                    var target_challenge_area = angular.element(document.querySelector("#target_challenge_area"));
+                    target_challenge_area.addClass("active");
                 }
             }
             scope.$apply();
