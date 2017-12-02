@@ -3,7 +3,7 @@
       <a data-href="#presentation_area" id="target_presentation_area" class="active" ng-click="stickNavLinks($event)">Présentation</a>
    </li>
    <li>
-      <a data-href="#news_area" id="target_news_area" ng-click="stickNavLinks($event)">Actualités</a>
+      <a data-href="#news_area" id="target_news_area" ng-click="stickNavLinks($event)">Vidéo</a>
    </li>
    <li>
       <a data-href="#spaces_area" id="target_spaces_area" ng-click="stickNavLinks($event)">Espaces</a>
@@ -27,7 +27,28 @@
       </p>
       <a data-href="#news_area" class="scroll_btm" ng-click="scroll_btm($event)">&nbsp;</a>
    </section>
-   <section id="news_area" class="sections_area news_area clearfix">
+  
+  <section id="news_area" class="sections_area news_area clearfix">
+     <div class="left_parte">
+       <div class="title_area">
+        <h3 class="block_title with_bg orange_clr withRelated_icn news_big_title">
+           <span>
+              Vidéo de présentation
+           </span>
+        </h3>
+       </div>
+    </div>
+       <div class="right_parte grey_bg">
+           <p>
+             <video width="480" height="320" controls>
+                <source src="assets/img/Teaser_FAM_Final.mp4" type="video/mp4">
+              Votre navigateur ne supporte pas la balise vidéo.
+              </video>
+           </p>
+     </div>
+  </section>
+  
+   <!--<section id="news_area" class="sections_area news_area clearfix">
       <div class="left_parte">
          <div class="title_area">
             <h3 class="block_title with_bg orange_clr withRelated_icn news_big_title">
@@ -66,7 +87,7 @@
             </li>
          </ul>
       </div>
-   </section>
+   </section>-->
    <section id="spaces_area" class="sections_area spaces_area clearfix">
       <div class="left_parte space_student grey_bg">
          <div class="title_area">
@@ -124,7 +145,80 @@
       </div>
    </section>
   <section id="info_pratic_area" class="sections_area clearfix">
-    <div class="left_parte grey_bg contact_area">
+        <div class="left_parte space_carre_center">
+         <div class="title_area">
+            <h3 class="block_title with_bg orange_clr withRelated_icn partners_title">
+               <span>
+                  Partenaires
+               </span>
+            </h3>
+         </div>
+         <div class="mb_30">
+            <div class="align_center" style="margin-top: 50px; margin-bottom: 20px;">
+              <a href="https://www.schneider-electric.com/fr/about-us/careers/your-experience-level.jsp"><img src="assets/img/partenaire1.png" style="height: 60px; margin: 5px;"></a>
+              <a href="https://www.essity.com"><img src="assets/img/partenaire2.png" style="height: 60px; margin: 5px;"></a>
+              <a href="http://www.ariane.group"><img src="assets/img/partenaire3.png" style="height: 60px; margin: 5px;"></a>
+              <br>
+              <a href="https://www.jobteaser.com/fr/users/sign_in"><img src="assets/img/partenaire4.png" style="height: 60px; margin: 5px;"></a>
+              <a href ="https://choosemycompany.com/fr/classement-des-meilleurs-stages"><img src="assets/img/partenaire5.png" style="height: 60px; margin: 5px;"></a>
+              <a href="https://universumglobal.com"><img src="assets/img/partenaire6.png" style="height: 60px; margin: 5px;"></a>
+
+         </div>
+         <!--<div class="align_center">
+            <img src="assets/img/logo_challenge.png" alt="logo challenge" style="height: 200px;">
+         </div>-->
+      </div>
+    </div>
+      <div class="right_parte grey_bg">
+        <div id="map_plan" class="mb_40"></div>
+          <div class="map_output">
+              <p class="group_info">
+                 <label for="" class="darkPurple_clr">
+                    Lieu
+                 </label>
+                 <span>
+                    Parc des Expositions Le Bourget 
+                    <br>                                             
+                    Carrefour Charles Lindbergh, 93350 Le Bourget
+                 </span>
+              </p>
+              <p class="group_info">
+                 <label for="" class="darkPurple_clr">
+                    Date
+                 </label>
+                 <span>
+                    le 6 décembre de 9h00 à 18h00
+                 </span>
+              </p>
+              <p class="group_info">
+                 <label for="" class="darkPurple_clr">
+                    Accès
+                 </label>
+                 <span>
+                    RER B : Le Bourget 
+                    <br>
+                    Bus : 133
+                 </span>
+              </p>
+              <p class="group_info">
+                 <label for="" class="darkPurple_clr">
+                    Coût
+                 </label>
+                 <span>
+                    Gratuit
+                 </span>
+              </p>
+          </div>
+          <!--<p class="align_center">
+             <a href="" class="btn purple_btn animated_btn">
+                <span>
+                   Télécharger le plan du forum
+                </span>
+             </a>
+          </p>-->
+      </div>     
+      
+          <!--<div class="left_parte grey_bg contact_area">
          <div class="title_area">
             <h3 class="block_title with_bg darkPurple_clr withRelated_icn contact_title">
                <span>
@@ -197,55 +291,8 @@
                </div>
             </form>
          </div>
-      </div>
-      <div class="right_parte grey_bg">
-        <div id="map_plan" class="mb_40"></div>
-          <div class="map_output">
-              <p class="group_info">
-                 <label for="" class="darkPurple_clr">
-                    Lieu
-                 </label>
-                 <span>
-                    Parc des Expositions Le Bourget 
-                    <br>                                             
-                    Carrefour Charles Lindbergh, 93350 Le Bourget
-                 </span>
-              </p>
-              <p class="group_info">
-                 <label for="" class="darkPurple_clr">
-                    Date
-                 </label>
-                 <span>
-                    le 6 décembre de 9h00 à 18h00
-                 </span>
-              </p>
-              <p class="group_info">
-                 <label for="" class="darkPurple_clr">
-                    Accès
-                 </label>
-                 <span>
-                    RER B : Le Bourget 
-                    <br>
-                    Bus : 133
-                 </span>
-              </p>
-              <p class="group_info">
-                 <label for="" class="darkPurple_clr">
-                    Coût
-                 </label>
-                 <span>
-                    Gratuit
-                 </span>
-              </p>
-          </div>
-          <!--<p class="align_center">
-             <a href="" class="btn purple_btn animated_btn">
-                <span>
-                   Télécharger le plan du forum
-                </span>
-             </a>
-          </p>-->
-      </div>     
-      
+      </div>-->
+          
+          
    </section>
 </div>
