@@ -3,15 +3,20 @@
         <a data-href="#biensepreparer_area" id="target_biensepreparer_area" class="active" ng-click="stickNavLinks($event)">Présentation</a>
     </li>
     <li>
+        <a data-href="#programme_area" id="target_programme_area" ng-click="stickNavLinks($event)">Programme</a>
+    </li>
+    <li>
         <a data-href="#carre_area" id="target_carre_area" ng-click="stickNavLinks($event)">Seekube</a>
     </li>
     <li>
         <a data-href="#challenge_area" id="target_challenge_area" ng-click="stickNavLinks($event)">Challenge</a>
     </li>
+
     <!--<li>
         <a data-href="#programme_area" id="target_programme_area" ng-click="stickNavLinks($event)">Programme</a>
     </li>-->
 </ul>
+
 <div class="global_wrapper biensepreparer_page">
   <section id="biensepreparer_area" class="presentation_area home_biensepreparer">
       <div class="biensepreparer_txt_area">
@@ -26,6 +31,37 @@
       </div>
       <a data-href="#carre_area" class="scroll_btm" ng-click="scroll_btm($event)">&nbsp;</a>
   </section>
+  
+<section id="programme_area" class="sections_area programme_area clearfix">
+      <div class="left_parte">
+          <div class="title_area">
+              <h3 class="block_title with_bg orange_clr withRelated_icn programme_title">
+                <span class="small_title_parte">
+                   Programme
+                </span>
+              </h3>
+              <div class="block_content mb_60">
+                <p class="mt_15 mb_15">
+                  Le programme est enfin disponible ! Venez assister aux nombreuses conférences pour découvrir certains aspects des entreprises que vous ne connaissez pas encore. 
+                </p>
+                <br>
+                <p class="mt_15 mb_15">
+                  Venez soutenir les équipes du challenge A&M pour sa deuxième édition ! La finale commence à 14h30 sous l'oeil exigeant de nos entreprises partenaires.
+                </p>
+                    <a class="btn big_btn purple_btn animated_btn inverted_btn shadow_btn" href="assets/programme_forum.pdf">
+                     <span>Télécharger le programme</span>
+                  </a>
+              </div>
+          </div>
+      </div>
+      <div class="right_parte grey_bg">
+        <div class="align_center">
+              <img src="assets/img/programme.jpg" alt="logo challenge" style="height: 400px; margin-top: 50px;">
+        </div>
+      </div>
+  </section>
+</div>
+  
   <section id="carre_area" class="sections_area carre_area clearfix">
       <div class="left_parte carre_center grey_bg">
           <img src="assets/img/img_carre_center.jpg">
@@ -92,44 +128,12 @@
             </div>
          </div>
       </div>
-    <div class="right_parte space_carre_center">
-         <div class="title_area">
-            <h3 class="block_title with_bg orange_clr withRelated_icn partners_title">
-               <span>
-                  Partenaires
-               </span>
-            </h3>
-         </div>
-         <div class="mb_30">
-            <div class="align_center" style="margin-top: 50px; margin-bottom: 20px;">
-                  <img src="assets/img/partenaire1.png" style="height: 60px; margin: 5px;">
-                  <img src="assets/img/partenaire2.png" style="height: 60px; margin: 5px;">
-                  <img src="assets/img/partenaire3.png" style="height: 60px; margin: 5px;">
-
-         </div>
-         <div class="align_center">
-            <img src="assets/img/logo_challenge.png" alt="logo challenge" style="height: 200px;">
-         </div>
+    <div class ="right_parte">
+      <div class="align_center">
+            <img src="assets/img/logo_challenge.png" alt="logo challenge" style="height: 300px; margin-top: 200px;">
       </div>
+    </div>
+  </section>
       
 
 
-  <!--<section id="programme_area" class="sections_area programme_area clearfix">
-      <div class="left_parte">
-          <div class="title_area">
-              <h3 class="block_title with_bg orange_clr withRelated_icn programme_title">
-                <span class="small_title_parte">
-                   Programme
-                </span>
-              </h3>
-              <div class="block_content mb_60">
-              </div>
-          </div>
-      </div>
-      <div class="right_parte space_programme grey_bg">
-          <div class="block_content mb_60">
-              <div ng-bind-html="textes['programme']" class="markdown-body"></div>
-          </div>
-      </div>
-  </section>-->
-</div>
